@@ -15,4 +15,4 @@ class Solution(object):
             char_to_word[c] = w
             word_to_char[w] = c
             
-        return True
+        return True 
