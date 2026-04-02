@@ -1,0 +1,16 @@
+class Solution(object):
+    def sortedArrayToBST(self, nums):
+        return self.convert(nums, 0, len(nums) - 1)
+
+    def convert(self, nums, left, right):
+        if left > right:
+            return None
+        
+        mid = (left + right) / 2
+        
+        node = TreeNode(nums[mid])
+        
+        node.left = self.convert(nums, left, mid - 1)
+        node.right = self.convert(nums, mid + 1, right)
+        
+        return node
