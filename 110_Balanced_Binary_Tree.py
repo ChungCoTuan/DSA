@@ -10,7 +10,7 @@ class Solution(object):
                 
             right_height = checkHeight(node.right)
             if right_height == -1:
-                return -1
+                return -18
                 
             if abs(left_height - right_height) > 1:
                 return -1
